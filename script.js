@@ -1,31 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Welcome Message
-    alert("Welcome to THADCO Security Consultancy");
+    // Dynamic Home Page Content
+    const dynamicText = document.getElementById("dynamic-text");
 
-    // Contact Form Validation
-    const form = document.querySelector("form");
+    if(dynamicText){
 
-    if(form){
+        const messages = [
 
-        form.addEventListener("submit", function(event){
+            "Professional Security Consultancy Services",
+            "Advanced AI-Powered Security Solutions",
+            "Trusted Training and Risk Management Experts",
+            "Protecting People, Property and Assets"
 
-            const name = document.querySelector("input[type='text']").value;
-            const email = document.querySelector("input[type='email']").value;
-            const message = document.querySelector("textarea").value;
+        ];
 
-            if(name === "" || email === "" || message === ""){
+        let index = 0;
 
-                alert("Please fill in all fields.");
-                event.preventDefault();
+        setInterval(function(){
 
-            } else {
+            dynamicText.textContent = messages[index];
 
-                alert("Message submitted successfully!");
+            index++;
 
+            if(index >= messages.length){
+                index = 0;
             }
 
-        });
+        }, 3000);
 
     }
 

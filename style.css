@@ -12,6 +12,9 @@ header{
 }
 
 nav{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
     margin-top:10px;
 }
 
@@ -21,7 +24,6 @@ nav a{
     margin:10px;
     font-weight:bold;
 }
-
 section{
     padding:20px;
     background:white;
@@ -60,15 +62,3 @@ button{
     cursor:pointer;
 }
 
-@media (max-width:600px){
-
-nav{
-    display:flex;
-    flex-direction:column;
-}
-
-nav a{
-    margin:5px;
-}
-
-}
